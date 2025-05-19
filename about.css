@@ -1,0 +1,387 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+
+.header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: white;
+    box-shadow: 0px 0px 10px grey;
+    transition: 0.3s;
+}
+
+.header h1 {
+    font-size: 30px;
+    transform: translateX(150px);
+    font-weight: bold;
+}
+
+.header .a {
+    text-decoration: none;
+    font-size: 17px;
+    transform: translateX(600px);
+    margin-left: 35px;
+    color: rgba(0, 0, 0, 0.7);
+
+}
+
+.header .a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(212, 5, 5);
+    transition: width 0.3s ease-in-out;
+    color: rgba(0, 0, 0, 0.8);
+
+}
+
+
+.header .a:hover::after {
+    width: 100%;
+}
+
+.header button {
+    transform: translateX(650px);
+    padding: 10px 20px 10px 20px;
+    width: 250px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(212, 5, 5);
+}
+
+.header button:hover {
+    background-color: rgb(245, 40, 40);
+    transition: 0.3s;
+}
+
+.aboutUs {
+    height: 130vh;
+    width: 100%;
+    /* background-color: aquamarine; */
+}
+
+.aboutUs p {
+    opacity: 0.7;
+    text-align: center;
+    transform: translateY(40px);
+
+}
+
+.aboutUs .learn {
+    font-family: "Protest Revolution", serif;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    transform: translateY(60px);
+    font-size: 40px;
+    color: orangered;
+}
+
+.aboutUs img {
+    height: 600px;
+    width: 850px;
+    position: absolute;
+    top: 300px;
+    left: 130px;
+}
+
+.aboutUs .content {
+    /* border: 2px solid black; */
+    height: 590px;
+    width: 500px;
+    margin-left: 1050px;
+    margin-top: 108px;
+    font-weight: bold;
+}
+
+/* .aboutUs .content {
+    text-indent: 100px;
+    text-align: justify;
+    line-height: 27px;
+} */
+.aboutUs .content b {
+    font-weight: bold;
+    color: orangered;
+
+}
+
+.aboutUs .content .bb {
+    color: black;
+}
+
+.aboutUs .bookTable {
+    height: 110px;
+    width: 850px;
+    border: 4px solid rgb(68, 67, 67);
+    position: absolute;
+    left: 130px;
+    top: 60rem;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    font-size: 30px;
+}
+
+.aboutUs .bookTable h1 {
+
+    font-size: 40px;
+    color: orangered;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.aboutUs .bookTable .no {
+    color: red;
+    font-weight: 600;
+    margin-left: -280px;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.customers-content{
+    
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+.customers h2{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.customers-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    
+    gap: 1.5rem;
+    margin-top: 2rem;
+
+}
+.customers-content .box{
+    padding: 20px;
+    box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+    border-radius: 0.5rem;
+    border-bottom: 7px solid green;
+
+}
+.customers-content .box:hover{
+    transform: translateY(10px);
+    transition: 0.2s all linear;
+}
+.customers-content .box .bx{
+    font-size: 24px;
+    color: rgb(0, 153, 0);
+}
+.customers-content .box .star .bx{
+    font-size: 1rem;
+    color: orangered;
+
+}
+.customers-content .box p{
+    font-size: 0.938rem;
+
+}
+.review-profile{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    column-gap: 0.5rem;
+
+}
+.review-profile img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    
+} 
+.review-profile h3{
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+
+footer {
+    height: 400px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    margin-top: 200px;
+
+
+}
+
+footer .content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer div {
+
+    margin-top: 70px;
+    height: 200px;
+    width: 300px;
+    /* background-color: yellowgreen; */
+}
+
+footer .copy {
+    display: block;
+    position: relative;
+    top: 60px;
+    left: 600px;
+    height: 60px;
+    width: 400px;
+    color: rgb(0, 0, 0);
+}
+
+footer .copy .p2 {
+    position: relative;
+    left: 100px;
+    color: white;
+}
+
+footer .address i {
+    font-size: 28px;
+    color: rgb(212, 5, 5);
+    position: relative;
+    top: 5px;
+    left: 15px;
+
+}
+
+footer .address .h2,
+.p1 {
+    position: relative;
+    left: 50px;
+    top: -30px;
+    color: white;
+}
+
+footer .address .h2 {
+    font-weight: bold;
+}
+
+footer .contact i {
+    font-size: 27px;
+    color: rgb(212, 5, 5);
+    position: relative;
+    top: 5px;
+    left: 15px;
+
+}
+
+footer .contact .h2,
+.p1 {
+    position: relative;
+    left: 50px;
+    top: -30px;
+    color: white;
+}
+
+footer .contact .h2 {
+    font-weight: bold;
+}
+
+footer .contact b {
+    font-weight: bold;
+}
+
+footer .open i {
+    font-size: 27px;
+    color: rgb(212, 5, 5);
+    position: relative;
+    top: 5px;
+    left: 15px;
+
+}
+
+footer .open .h2,
+.p1 {
+    position: relative;
+    left: 50px;
+    top: -30px;
+    color: white;
+}
+
+footer .open .h2 {
+    font-weight: bold;
+}
+
+footer .icon i {
+    color: white;
+    position: relative;
+    top: 25px;
+    left: -20px;
+    font-size: 30px;
+    margin-left: 20px;
+    border: 1px solid white;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+footer .icon i:hover {
+    color: rgb(212, 5, 5);
+    border-color: rgb(212, 5, 5);
+    transition: 0.3s;
+}
+
+footer .icon h2 {
+    color: white;
+    font-weight: bold;
+}

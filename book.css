@@ -1,0 +1,286 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+:root {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-out {
+    animation: fadeOut 0.3s ease-in-out forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  .header {
+      height: 100px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: transparent;
+      transition: background-color 0.3s ease;
+  }
+
+  .header.scrolled {
+      background-color: white;
+      box-shadow: 0px 0px 10px grey;
+      transition: 0.3s;
+  }
+.header h1{
+    font-size: 30px;
+    transform: translateX(150px);
+    font-weight: bold;
+}
+.header .a{
+    text-decoration: none;
+    font-size: 17px;
+    transform: translateX(600px);
+    margin-left: 35px;
+    color: rgba(0, 0, 0, 0.7);
+
+}
+.header .a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(212, 5, 5);
+    transition: width 0.3s ease-in-out;
+    color: rgba(0, 0, 0, 0.8); 
+
+  }
+
+ 
+.header .a:hover::after {
+    width: 100%;
+  }
+.header button{
+    transform: translateX(640px);
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(212, 5, 5);
+}
+.header button:hover{
+    background-color: rgb(245, 40, 40);
+    transition: 0.3s;
+}
+
+.bookTable{
+    height: 120vh;
+    width: 100%;
+    /* background-color: brown;  */
+}
+.bookTable p{
+    opacity: 0.7;
+    text-align: center;
+
+}
+.bookTable h1{
+    font-family: "Protest Revolution", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 40px;
+    color: orangered;
+    text-align: center;
+    margin-top: 60px;
+}
+.bookTable .book{
+    height: 500px;
+    width: 85%;
+    margin-left: 120px;
+    margin-top: 100px;
+    background-color: rgba(236, 236, 234, 0.4);   
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.book .form1{
+    height:500px ;
+    width: 30%;
+    /* border: 2px solid black; */
+    background-image: url(./images/reservation.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.book .form2{
+    height: 500px;
+    width: 70%;
+    /* background-color: red; */
+}
+.book .form2 input,textarea,button{
+    padding: 10px;
+    width: 250px;
+    margin: 15px;
+    transform: translateY(70px);
+    outline: none;
+    border: none;
+    
+}
+.book .form2 input:hover{
+    border: 1px solid red;
+    
+    
+}
+.book .form2 textarea:hover{
+    border: 1px solid red;
+    
+}
+.book .form2 textarea{
+    width: 870px;
+    height: 100px;
+}
+
+.book .form2 button{
+    margin-top: 80px;
+    transform: translateX(300px);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(212, 5, 5);
+
+
+}
+.book .form2 button:hover{
+    background-color: rgb(245, 40, 40);
+    transition: 0.3s;
+}
+
+footer{
+    height: 400px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    margin-top: 200px;
+    
+
+}
+footer .content{
+    display: flex;
+    justify-content: space-evenly;
+}
+footer div{
+
+    margin-top: 70px;
+    height: 200px;
+    width: 300px;
+    /* background-color: yellowgreen; */
+}
+footer .copy{
+    display: block;
+    position: relative;
+    top: 60px;
+    left: 600px;
+    height: 60px;
+    width: 400px;
+    color: rgb(0, 0, 0);
+}
+footer .copy .p2{
+    position: relative;
+    left: 100px;
+    color: white;
+}
+footer .address i{
+    font-size: 28px;
+    color: rgb(212, 5, 5);
+    position: relative;
+    top: 5px;
+    left: 15px;
+
+}
+footer .address .h2,.p1{
+    position: relative;
+    left: 50px;
+    top: -30px;
+    color: white;
+}
+footer .address .h2{
+    font-weight: bold;
+}
+footer .contact i{
+    font-size: 27px;
+    color: rgb(212, 5, 5);
+    position: relative;
+    top: 5px;
+    left: 15px;
+
+}
+footer .contact .h2,.p1{
+    position: relative;
+    left: 50px;
+    top: -30px;
+    color: white;
+}
+footer .contact .h2{
+    font-weight: bold;
+}
+footer .contact b{
+    font-weight: bold;
+}
+footer .open i{
+    font-size: 27px;
+    color: rgb(212, 5, 5);
+    position: relative;
+    top: 5px;
+    left: 15px;
+
+}
+footer .open .h2,.p1{
+    position: relative;
+    left: 50px;
+    top: -30px;
+    color: white;
+}
+footer .open .h2{
+    font-weight: bold;
+}
+footer .icon i{
+    color: white;
+    position: relative;
+    top: 25px;
+    left: -20px;
+    font-size: 30px;
+    margin-left: 20px;
+    border: 1px solid white;
+    padding: 7px;
+    border-radius: 50%;
+}
+footer .icon i:hover{
+    color: rgb(212, 5, 5);
+    border-color: rgb(212, 5, 5);
+    transition: 0.3s;
+}
+footer .icon h2{
+    color: white;
+    font-weight: bold;
+}

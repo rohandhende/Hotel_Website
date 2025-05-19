@@ -1,0 +1,411 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: white;
+    box-shadow: 0px 0px 10px grey;
+    transition: 0.3s;
+}
+
+.header h1 {
+    font-size: 30px;
+    transform: translateX(150px);
+    font-weight: bold;
+}
+
+.header .a {
+    text-decoration: none;
+    font-size: 17px;
+    transform: translateX(600px);
+    margin-left: 35px;
+    color: rgba(0, 0, 0, 0.7);
+
+}
+
+.header .a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(212, 5, 5);
+    transition: width 0.3s ease-in-out;
+    color: rgba(0, 0, 0, 0.8);
+
+}
+
+
+.header .a:hover::after {
+    width: 100%;
+}
+
+.header button {
+    transform: translateX(650px);
+    padding: 10px 20px 10px 20px;
+    width: 250px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(212, 5, 5);
+}
+
+.header button:hover {
+    background-color: rgb(245, 40, 40);
+    transition: 0.3s;
+}
+
+.contact {
+    height: 210vh;
+    width: 100%;
+
+}
+
+.contact p {
+    opacity: 0.7;
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+
+.contact h1 {
+    font-family: "Protest Revolution", serif;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    position: relative;
+    top: 80px;
+    color: orangered;
+    font-size: 40px;
+}
+
+.contact .con {
+    position: absolute;
+    top: 300px;
+    left: 120px;
+    height: 80vh;
+    width: 85%;
+
+    /* background-color: cadetblue; */
+}
+
+.contact .con2 {
+    /* border: 1px solid white; */
+    height: 100px;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact .con2 .address {
+    margin-right: 10px;
+    height: 100px;
+    width: 50%;
+    box-shadow: 0px 0px 20px rgb(201, 200, 200);
+}
+
+.contact .con2 .callUs {
+    margin-left: 10px;
+    height: 100px;
+    width: 50%;
+    box-shadow: 0px 0px 20px rgb(201, 200, 200);
+}
+
+.contact .con2 .email {
+    margin-top: 30px;
+    margin-right: 10px;
+    height: 100px;
+    width: 50%;
+    box-shadow: 0px 0px 20px rgb(201, 200, 200);
+}
+
+.contact .con2 .open {
+    margin-top: 30px;
+    margin-left: 10px;
+    height: 100px;
+    width: 50%;
+    box-shadow: 0px 0px 20px rgb(201, 200, 200);
+
+}
+
+.con2 i {
+    position: relative;
+    top: 20px;
+    left: 10px;
+    padding: 18px;
+
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(212, 5, 5);
+    font-size: 25px;
+
+}
+
+.con2 h2 {
+    position: relative;
+    top: -50px;
+    left: 100px;
+    font-weight: bold;
+    /* opacity: 0.6; */
+}
+
+.con2 p {
+    position: relative;
+    top: -40px;
+    left: 20px;
+    color: black;
+}
+
+.con2 .no {
+    position: relative;
+    left: -165px;
+
+}
+
+.con2 .mail {
+    position: relative;
+    left: -145px;
+}
+
+.con2 .time {
+    position: relative;
+    left: -75px;
+}
+
+.form {
+    height: 65vh;
+    width: 85%;
+    /* background-color: red; */
+    box-shadow: 0px 0px 10px rgb(206, 206, 206);
+    position: absolute;
+    top: 70rem;
+    left: 120px;
+
+}
+
+.form form input,
+textarea {
+    outline: none;
+    width: 45%;
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.form form .sub {
+    width: 93.5%;
+}
+
+.form form textarea {
+    width: 93.5%;
+    height: 150px;
+}
+
+.form form button {
+    position: relative;
+    left: 550px;
+    top: 40px;
+    padding: 10px 20px 10px 20px;
+    width: 250px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(212, 5, 5);
+}
+
+.form form button:hover {
+    background-color: rgb(245, 40, 40);
+    transition: 0.3s;
+}
+
+.form form input:hover {
+    border: 1px solid red;
+
+
+}
+
+.form form textarea:hover {
+    border: 1px solid red;
+
+}
+
+footer {
+    height: 400px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    margin-top: 200px;
+
+
+}
+
+footer .content1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer div {
+
+    margin-top: 70px;
+    height: 200px;
+    width: 300px;
+    /* background-color: yellowgreen; */
+}
+
+footer .copy1 {
+    display: block;
+    position: relative;
+    top: 60px;
+    left: 600px;
+    height: 60px;
+    width: 400px;
+    color: rgb(0, 0, 0);
+}
+
+footer .copy1 .p2 {
+    position: relative;
+    left: 100px;
+    color: white;
+}
+
+footer .address1 i {
+    font-size: 28px;
+    color: rgb(212, 5, 5);
+    position: relative;
+    top: 5px;
+    left: 15px;
+
+}
+
+footer .address1 .h2,
+.p1 {
+    position: relative;
+    left: 50px;
+    top: -30px;
+    color: white;
+}
+
+footer .address1 .h2 {
+    font-weight: bold;
+}
+
+footer .contact1 i {
+    font-size: 27px;
+    color: rgb(212, 5, 5);
+    position: relative;
+    top: 5px;
+    left: 15px;
+
+}
+
+footer .contact1 .h2,
+.p1 {
+    position: relative;
+    left: 50px;
+    top: -30px;
+    color: white;
+}
+
+footer .contact1 .h2 {
+    font-weight: bold;
+}
+
+footer .contact1 b {
+    font-weight: bold;
+}
+
+footer .open1 i {
+    font-size: 27px;
+    color: rgb(212, 5, 5);
+    position: relative;
+    top: 5px;
+    left: 15px;
+
+}
+
+footer .open1 .h2,
+.p1 {
+    position: relative;
+    left: 50px;
+    top: -30px;
+    color: white;
+}
+
+footer .open1 .h2 {
+    font-weight: bold;
+}
+
+footer .icon1 i {
+    color: white;
+    position: relative;
+    top: 25px;
+    left: -20px;
+    font-size: 30px;
+    margin-left: 20px;
+    border: 1px solid white;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+footer .icon1 i:hover {
+    color: rgb(212, 5, 5);
+    border-color: rgb(212, 5, 5);
+    transition: 0.3s;
+}
+
+footer .icon1 h2 {
+    color: white;
+    font-weight: bold;
+}

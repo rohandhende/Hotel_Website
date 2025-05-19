@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+  <h1>Confirm Your Payment</h1>
+  <p><q>Enter your payment details to confirm your booking:</q></p>
+
+  <form id="paymentForm">
+    <label for="roomType">Choose Room Type:</label>
+    <select id="roomType" onchange="updateAmount()">
+      <option value="">Select Room Type</option>
+      <option value="AC">AC Room (₹1000)</option>
+      <option value="Non-AC">Non-AC Room (₹500)</option>
+    </select>
+    <p id="amountDisplay">Amount: ₹0</p>
+    <div>
+      <input type="radio" id="creditCard" name="paymentMethod" value="Credit Card" required>
+      <label for="creditCard">Credit Card</label><br>
+      <input type="text" id="creditCardField" placeholder="Enter Credit Card Number" class="payment-field">
+    </div>
+
+    <div>
+      <input type="radio" id="debitCard" name="paymentMethod" value="Debit Card">
+      <label for="debitCard">Debit Card</label><br>
+      <input type="text" id="debitCardField" placeholder="Enter Debit Card Number" class="payment-field">
+    </div>
+
+    <div>
+      <input type="radio" id="upi" name="paymentMethod" value="UPI">
+      <label for="upi">UPI</label><br>
+      <input type="text" id="upiField" placeholder="Enter UPI ID" class="payment-field">
+    </div>
+
+    <div>
+      <input type="radio" id="qrCode" name="paymentMethod" value="QR Code">
+      <label for="qrCode">QR Code</label><br>
+      <div id="qr-section" style="display: none;">
+        <p>Scan the QR Code to make a payment:</p>
+        <img src="https://w7.pngwing.com/pngs/144/829/png-transparent-qr-code-information-qr-code-android-qrcode-text-rectangle-monochrome-thumbnail.png" alt="QR Code" style="width: 150px; height: 150px;"><br>
+        <button type="button" onclick="simulateQRScan()">Simulate QR Scan</button>
+      </div>
+    </div><br>
+
+    <button type="button" onclick="confirmPayment()">Confirm Payment</button>
+    <p id="message"></p>
+  </form>
+
+
+
+  
+
+  <script src="payment.js"></script>
+</body>
+</html>

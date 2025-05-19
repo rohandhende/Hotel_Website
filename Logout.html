@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <style>
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      
+      .container {
+        background-color: #f4f8f5;
+        border-radius: 10px;
+        text-align: center;
+        padding: 40px;
+        max-width: 600px;
+        box-shadow: 0 0 20px rgb(0, 0, 0);
+      }
+      .container:hover{
+        box-shadow: none;
+        transition: 0.3s;
+      }
+      
+      .top-section {
+        margin-bottom: 30px;
+      }
+      
+      .check-icon {
+        font-size: 50px;
+        color: #2ecc71;
+        margin-bottom: 10px;
+      }
+      
+      h1 {
+        font-size: 36px;
+        color: #333;
+      }
+      
+      p {
+        font-size: 16px;
+        color: #777;
+      }
+      
+      .bottom-section {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      
+      .card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        flex: 1;
+      }
+      
+      .card h2 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      
+      .icon {
+        background-color: rgb(212, 5, 5);
+        color: white;
+        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        text-decoration: none;
+      }
+      
+      .icon:hover {
+        background-color: rgb(245, 40, 40);
+        transition: 0.2s;
+      }
+      
+      .visit-button {
+        display: inline-block;
+        background-color: rgb(212, 5, 5);
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      
+      .visit-button:hover {
+        background-color: rgb(245, 40, 40);
+      }
+      .close-page{
+        text-decoration: none;
+        font-weight: 700;
+        color: black;
+      }
+      .close-page:hover{
+        color: #27ae60;
+        font-size: 15px;
+        font-weight: 700;
+        
+        transition: 0.3s;
+      }
+ </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-section">
+      <div class="check-icon">✔</div>
+      <h1>Thank you!</h1><br>
+      <p>"Thank you for choosing us! We deeply appreciate your visit and look forward to welcoming you again for another delightful experience."</p>
+    </div>
+
+    <div class="bottom-section">
+      <div class="card">
+        <h2>Connect With Us</h2>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/r0ha_n_/" class="icon fb" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/RohanDhende3" class="icon linkedin" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.facebook.com/" class="icon pinterest" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/rohan-dhende-419407255/" class="icon twitter" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Visit Our Website</h2>
+        <a href="./index.html" class="visit-button">Visit Website</a>
+      </div>
+    </div>
+    <br><br>
+    <div class="close-link">
+      <a href="#" onclick="closePage()" class="close-page">Close Page</a>
+    </div>
+  </div>
+
+ <script src="./scriptall.js"></script>
+</body>
+</html>
